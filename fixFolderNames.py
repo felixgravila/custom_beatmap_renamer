@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import os
 
@@ -31,14 +31,14 @@ for d in os.listdir(current_dir):
                     levelcreator = content
                
             if author == "":
-                newname = f"{levelcreator}-{songname}"
+                newname = "{}-{}".format(levelcreator, songname)
             else:
-                newname = f"{author}-{songname}-({levelcreator})"
+                newname = "{}-{}-({})".format(author, songname, levelcreator)
             if newname not in os.listdir(current_dir):
-                print(f"renaming {d} to {newname}")
+                print("renaming {} to {}".format(d, newname))
                 old = os.path.join(current_dir, d)
                 new = os.path.join(current_dir, newname)
                 os.rename(old, new)
             else:
                 if d != newname:
-                    print(f"{newname} duplicate")
+                    print("{} duplicate".format(newname))
