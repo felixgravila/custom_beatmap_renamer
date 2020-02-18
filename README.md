@@ -5,4 +5,4 @@ a small script to help rename beatmap folders. A long list of folders named some
 
 ## Usage:
 
-Copy .py file to CustomLevels folder and execute it using python3 from the folder
+Copy .py file to CustomLevels folder and execute it using python from the folder
